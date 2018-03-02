@@ -47,7 +47,7 @@ a:link {
   color: rgb(34, 153, 230);
   text-decoration: none;
 }
-li a:link {
+li a:link, .flex a:link {
   color: var(--link-color);
   text-decoration: none;
 }
@@ -56,18 +56,18 @@ li a:link {
 a:visited {
   color: rgb(34, 153, 230);
 }
-li a:visited {
+li a:visited, .flex a:visited {
     color: var(--link-color);
 }
 
 /* mouse over link */
-li a:hover {
+li a:hover, .flex a:hover {
     color: var(--link-active);
     /* text-decoration: underline; */
 }
 
 /* selected link */
-li a:active {
+li a:active, .flex a:active {
     color: var(--link-active)
     /* text-decoration: underline; */
 }
@@ -176,7 +176,7 @@ nav li  {
 
 
 .articles {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .articles-left {
@@ -187,9 +187,16 @@ nav li  {
 .articles-right {
   width: 40%;
   flex-direction: column;
+  padding: 1rem 0;
+}
+
+/*  to match the doc specs exactly as shown in colmar-academy-spec.png */
+.thesis .articles-right {
+  padding: 2rem 0;
 }
 
 .articles img {
+  align-self:center;
   width: 100%;
 }
 
@@ -227,7 +234,7 @@ padding: 1rem;
 }
 .courses h2 {
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem 0rem;
 }
 
 .course {
@@ -248,4 +255,29 @@ padding: 1rem;
 
 .course-txt p {
   padding-top: .5rem;
+}
+
+.thesis {
+  align-items: flex-start;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.thesis-left {
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.thesis video {
+  width: 100%;
+}
+
+.thesis-left h3 {
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+footer.flex {
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  font-size: .75rem;
 }
