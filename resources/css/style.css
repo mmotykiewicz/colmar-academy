@@ -5,7 +5,7 @@ html {
 :root {
   --font-color: hsl(0, 0%, 30%);
   --link-color: hsl(0, 0%, 30%);
-  --link-active: hsl(0, 0%, 60%);
+  --link-active: hsla(0, 0%, 30%, 0.5);
   --btn-color: hsla(0, 0%, 10%, .7);
   --btn-color-hover: hsla(0, 0%, 10%, .4);
 }
@@ -41,36 +41,16 @@ p, span {
   font-size: 1rem;
 }
 
+a:link {color: var(--link-color); text-decoration: none;}
+a:visited {color: var(--link-color);}
+a:hover {color: var(--link-active);}
+a:active {color: var(--link-active);}
 
-/* unvisited link */
-a:link {
-  color: rgb(34, 153, 230);
-  text-decoration: none;
-}
-li a:link, .flex a:link {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-  color: rgb(34, 153, 230);
-}
-li a:visited, .flex a:visited {
-    color: var(--link-color);
-}
-
-/* mouse over link */
-li a:hover, .flex a:hover {
-    color: var(--link-active);
-    /* text-decoration: underline; */
-}
-
-/* selected link */
-li a:active, .flex a:active {
-    color: var(--link-active)
-    /* text-decoration: underline; */
-}
+a.btn:link {color: white}
+.article-text a:link {color: rgb(34, 153, 230);}
+.article-text a:visited {color: rgb(34, 153, 230);}
+.article-text a:hover {color: rgba(34, 153, 230, 0.5);}
+.article-text a:active {color: rgba(34, 153, 230, 0.5);}
 
 .content {
   width: 100%;
@@ -145,7 +125,6 @@ nav li  {
   background-color: var(--btn-color);
   padding: .5rem 0;
   text-align: center;
-  color: hsl(0, 0%, 90%);
   margin: 0 auto;
   transition: border-radius .3s linear;
 }
