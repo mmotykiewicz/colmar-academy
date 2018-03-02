@@ -1,3 +1,222 @@
- body {
-  background-color: yellowgreen;
+html {
+  font-size: 16px;
+}
+
+:root {
+  --font-color: hsl(0, 0%, 30%);
+  --link-color: hsl(0, 0%, 30%);
+  --link-active: hsl(0, 0%, 60%);
+  --btn-color: hsla(0, 0%, 10%, .7);
+  --btn-color-hover: hsla(0, 0%, 10%, .4);
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.2;
+  color: var(--font-color)
+  background-color: white;
+  margin: 0 auto;
+}
+
+.frame {
+  border: 1px solid blue;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p, span {
+  font-size: 1rem;
+}
+
+
+/* unvisited link */
+a:link {
+  color: rgb(34, 153, 230);
+  text-decoration: none;
+}
+li a:link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(34, 153, 230);
+}
+li a:visited {
+    color: var(--link-color);
+}
+
+/* mouse over link */
+li a:hover {
+    color: var(--link-active);
+    /* text-decoration: underline; */
+}
+
+/* selected link */
+li a:active {
+    color: var(--link-active)
+    /* text-decoration: underline; */
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headline, .articles, .courses, .thesis {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content:nth-child(2n+1) {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.flex {
+  display: flex;
+}
+
+
+.logo {
+    height: 2rem;
+    align-items: center;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: .5rem;
+}
+
+.logo img {
+  height: 3rem;
+}
+
+.logo span:first-of-type {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.logo span:last-of-type {
+font-size: 1.5rem;
+color: hsl(0, 0%, 50%);
+}
+
+nav li  {
+  display: inline;
+  padding: 0 .5rem;
+  font-size: 1.25rem;
+}
+
+.headline {
+  padding: 2rem 1.5rem;
+  align-items: center;
+}
+
+.headline img {
+  max-width: 60%;
+  padding-right: 1.5rem;
+}
+
+.headline-text h3 {
+  line-height: 1.4;
+  padding: 1.5rem 0;
+}
+
+.headline-text .btn {
+  display: block;
+  text-decoration: none;
+  background-color: var(--btn-color);
+  padding: .5rem 0;
+  text-align: center;
+  color: hsl(0, 0%, 90%);
+  margin: 0 auto;
+  transition: border-radius .3s linear;
+}
+
+.headline-text .btn:hover {
+  border-radius: 5px;
+  background-color: var(--btn-color-hover);
+}
+
+
+@media only screen and (max-width:900px) {
+  h1 {
+    font-size: 4.5vw;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 3.5vw;
+    line-height: 1;
+  }
+  h3, .btn a {
+    font-size: 2.5vw;
+    line-height: 1;
+  }
+  p, span, .article-text a {
+    font-size: 1.5vw;
+  }
+}
+
+
+.articles {
+  align-items: center;
+}
+
+.articles-left {
+  width: 60%;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid hsl(0, 0%, 90%);
+}
+.articles-right {
+  width: 40%;
+  flex-direction: column;
+}
+
+.articles img {
+  width: 100%;
+}
+
+.articles-left h2 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.article-box {
+align-items: center;
+transition: background-color .3s linear;
+}
+
+.article-box:hover {
+background-color: hsl(0, 0%, 90%);
+}
+
+.article-box img {
+width: 35%;
+height: auto;
+padding: 1rem;
+}
+
+.article-text {
+  width: 65%;
+}
+
+.article-text p {
+  padding: .5rem 0;
 }
