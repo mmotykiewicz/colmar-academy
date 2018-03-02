@@ -220,3 +220,32 @@ padding: 1rem;
 .article-text p {
   padding: .5rem 0;
 }
+
+.courses {
+  padding: 1rem 4.5rem;
+
+}
+.courses h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.course {
+  background-color: white;
+  margin: 1rem;
+  width: 33.3%;
+}
+
+.course img {
+  align-self: center;
+  height: auto;
+  max-width: 100%;
+}
+
+.course-txt {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.course-txt p {
+  padding-top: .5rem;
+}
