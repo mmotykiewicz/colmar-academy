@@ -52,12 +52,6 @@ a.btn:link {color: white}
 .article-text a:hover {color: rgba(34, 153, 230, 0.5);}
 .article-text a:active {color: rgba(34, 153, 230, 0.5);}
 
-.article-mobile-text a:link {color: rgb(34, 153, 230);}
-.article-mobile-text a:visited {color: rgb(34, 153, 230);}
-.article-mobile-text a:hover {color: rgba(34, 153, 230, 0.5);}
-.article-mobile-text a:active {color: rgba(34, 153, 230, 0.5);}
-
-
 .content {
   width: 100%;
   margin: 0 auto;
@@ -110,28 +104,6 @@ nav li  {
   font-size: 1.25rem;
 }
 
-.mobile-menu {
-  display: none;
-}
-
-@media only screen and (max-width: 768px) {
-  .logo, .desktop-menu {
-    display: none;
-  }
-  .mobile-menu {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .mobile-menu img {
-    width: 2rem;
-  }
-  header {
-    padding: 0;
-  }
-}
-
 .headline {
   padding: 2rem 1.5rem;
   align-items: center;
@@ -144,7 +116,7 @@ nav li  {
 
 .headline-text h3 {
   line-height: 1.4;
-  padding: 2rem 0 1.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .headline-text .btn {
@@ -163,7 +135,7 @@ nav li  {
 }
 
 
-@media only screen and (min-width: 769px) and (max-width: 900px) {
+@media only screen and (max-width:900px) {
   h1 {
     font-size: 4.5vw;
     line-height: 1.2;
@@ -181,35 +153,9 @@ nav li  {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .headline {
-    display: inline;
-    padding: 0;
-  }
-  .headline img {
-    max-width: 100%;
-  }
-  .headline-text {
-    padding: 2rem 1.5rem;
-  }
-  .headline-text h1 {
-    font-size: 10vw;
-  }
-  .headline-text h3 {
-    font-size: 6vw;
-  }
-  .headline-text .btn {
-    padding: 1rem 0;
-    font-size: 6vw;
-  }
-}
 
 .articles {
   align-items: flex-start;
-}
-
-.articles-mobile {
-  display:none;
 }
 
 .articles-left {
@@ -261,32 +207,6 @@ padding: 1rem;
   padding: .5rem 0;
 }
 
-
-@media only screen and (max-width: 768px) {
-  .articles {
-    display: none;
-  }
-  .articles-mobile {
-    display: block;
-    padding: 1rem;
-  }
-  .articles-mobile img {
-    max-width: 100%;
-  }
-  .article-mobile-text {
-    padding: 3rem 1rem;
-    font-size: 4vw;
-  }
-  .article-mobile-text h3 {
-    font-size: 7vw;
-  }
-  .article-mobile-text p {
-    font-size: 4vw;
-    padding: 1rem 0;
-  }
-
-}
-
 .courses {
   padding: 1rem 4.5rem;
 
@@ -319,11 +239,6 @@ padding: 1rem;
 .thesis {
   align-items: flex-start;
   border-bottom: 1px solid hsl(0, 0%, 90%);
-}
-
-.thesis-header {
-  text-align: center;
-  padding-top: 2rem;
 }
 
 .thesis-left {
