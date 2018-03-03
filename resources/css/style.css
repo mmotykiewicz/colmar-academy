@@ -19,10 +19,6 @@ body {
   margin: 0 auto;
 }
 
-.frame {
-  border: 1px solid blue;
-}
-
 h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -184,11 +180,13 @@ nav li  {
 
 @media only screen and (max-width: 768px) {
   .headline {
+    width: 100%;
     display: inline;
     padding: 0;
   }
   .headline img {
     max-width: 100%;
+    padding: 0;
   }
   .headline-text {
     padding: 2rem 1.5rem;
@@ -381,7 +379,9 @@ padding: 1rem;
     border: none;
   }
 
-  .articles-right, h3, p {
+  .articles-right,
+  .articles-right h3,
+  .articles-right p {
     display: none;
   }
 
